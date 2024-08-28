@@ -1,0 +1,212 @@
+      Settings
+
+{
+    "window.zoomLevel": -1,
+    "editor.fontSize": 15,
+    "editor.hover.enabled": true,
+    "workbench.startupEditor": "none",
+    "explorer.compactFolders": false,
+    "terminal.integrated.fontSize": 10,
+    "editor.rulers": [80, 120],
+    "workbench.colorTheme": "OM Theme (Default Dracula Italic)",
+    "workbench.iconTheme": "material-icon-theme",
+    "code-runner.executorMap": {
+      "python": "clear ; python -u"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.ignoreSelection": true,
+    "editor.fontFamily": "Consolas, 'Dank Mono', 'Source Code Pro', 'Fira Code', Menlo, 'Inconsolata', 'Droid Sans Mono', 'DejaVu Sans Mono', 'Ubuntu Mono', 'Courier New', Courier, Monaco, monospace",
+    "terminal.integrated.fontFamily": "",
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.python",
+      "editor.tabSize": 4,
+      "editor.insertSpaces": true,
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.fixAll.unusedImports": true,
+        "source.organizeImports": true
+      }
+    },
+    "python.languageServer": "Pylance",
+    "python.formatting.autopep8Args": [
+      "--indent-size=4",
+      "--max-line-length=80"
+      // "--ignore=E111"
+    ],
+    "python.linting.flake8Args": [
+      // "--ignore=E111",
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.analysis.diagnosticSeverityOverrides": {},
+    // "python.defaultInterpreterPath": "./venv/bin/python",
+    "python.analysis.typeCheckingMode": "basic",
+    "cSpell.enabled": false,
+}
+
+      Keybord
+
+// Place your key bindings in this file to override the defaults
+[
+   {
+     // + Zoom na fonte
+     "key": "ctrl+alt+cmd+=",
+     "command": "editor.action.fontZoomIn"
+   },
+   {
+     // - Zoom na fonte
+     "key": "ctrl+alt+cmd+-",
+     "command": "editor.action.fontZoomOut"
+   },
+   {
+     // Reset zoom da fonte
+     "key": "ctrl+alt+cmd+0",
+     "command": "editor.action.fontZoomReset"
+   },
+   {
+     // Duplica linhas
+     "key": "alt+d",
+     "command": "editor.action.copyLinesDownAction",
+     "when": "textInputFocus && !editorReadonly"
+   },
+   {
+     // Duplica linha acima
+     "key": "alt+s",
+     "command": "editor.action.copyLinesUpAction",
+     "when": "editorTextFocus && !editorReadonly"
+   },
+   {
+     // Comenta
+     "key": "ctrl+;",
+     "command": "editor.action.commentLine",
+     "when": "editorTextFocus && !editorReadonly"
+   },
+   {
+     // Remove o comenta original
+     "key": "ctrl+;",
+     "command": "-editor.action.commentLine",
+     "when": "editorTextFocus && !editorReadonly"
+   },
+   {
+     "key": "ctrl+shift+alt+k",
+     "command": "code-runner.runCustomCommand"
+   },
+   {
+     "key": "ctrl+alt+k",
+     "command": "-code-runner.runCustomCommand"
+   },
+   {
+     // Salva todos os arquivos
+     "key": "ctrl+alt+cmd+s",
+     "command": "workbench.action.files.saveAll"
+   },
+   {
+     // Mostra o terminal
+     "key": "ctrl+'",
+     "command": "workbench.action.terminal.toggleTerminal"
+   },
+   {
+     "key": "ctrl+shift+[BracketLeft]",
+     "command": "-workbench.action.terminal.toggleTerminal",
+     "when": "!terminalFocus"
+   },
+   {
+     "key": "ctrl+'",
+     "command": "workbench.action.terminal.focus",
+     "when": "!terminalFocus"
+   },
+   {
+     "key": "ctrl+'",
+     "command": "workbench.action.focusActiveEditorGroup",
+     "when": "terminalFocus"
+   },
+   {
+     // Mata o terminal
+     "key": "ctrl+alt+b",
+     "command": "workbench.action.terminal.kill"
+   },
+   {
+     "key": "ctrl+escape",
+     "command": "workbench.action.toggleActivityBarVisibility"
+   },
+   {
+     // Muda para lowercase
+     "key": "shift+alt+l",
+     "command": "editor.action.transformToLowercase"
+   },
+   {
+     // Muda para snake case
+     "key": "shift+alt+s",
+     "command": "editor.action.transformToSnakecase"
+   },
+   {
+     // Muda para title case
+     "key": "shift+alt+t",
+     "command": "editor.action.transformToTitlecase"
+   },
+   {
+     // Muda para uppercase
+     "key": "shift+alt+u",
+     "command": "editor.action.transformToUppercase"
+   },
+   {
+     // Move painel para a direita
+     "key": "ctrl+alt+3",
+     "command": "workbench.action.positionPanelRight"
+   },
+   {
+     // Move o painel para baixo
+     "key": "ctrl+alt+2",
+     "command": "workbench.action.positionPanelBottom"
+   },
+   {
+     // Abre o terminal nativo
+     "key": "ctrl+cmd+c",
+     "command": "workbench.action.terminal.openNativeConsole",
+     "when": "!terminalFocus"
+   },
+   {
+     // Remove Abre o terminal nativo padrão
+     "key": "shift+cmd+c",
+     "command": "-workbench.action.terminal.openNativeConsole",
+     "when": "!terminalFocus"
+   },
+   {
+     // Volta o zoom ao padrão
+     "key": "ctrl+cmd+0",
+     "command": "workbench.action.zoomReset"
+   },
+   {
+     // Remove zoom padrão
+     "key": "cmd+numpad0",
+     "command": "-workbench.action.zoomReset"
+   },
+   {
+     // Zoom in
+     "key": "ctrl+cmd+=",
+     "command": "workbench.action.zoomIn"
+   },
+   {
+     // Remove zoom in padrão
+     "key": "cmd+numpad_add",
+     "command": "-workbench.action.zoomIn"
+   },
+   {
+     // Zoom out
+     "key": "ctrl+cmd+-",
+     "command": "workbench.action.zoomOut"
+   },
+   {
+     // Remove zoom out padrão
+     "key": "cmd+numpad_subtract",
+     "command": "-workbench.action.zoomOut"
+   },
+   {
+     // Novo arquivo
+     "key": "alt+cmd+n",
+     "command": "explorer.newFile"
+   }
+]
